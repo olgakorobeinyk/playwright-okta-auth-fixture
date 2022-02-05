@@ -4,7 +4,7 @@ import { test } from '../../fixtures/authContext'
 test.describe('example test', () => {
   test.use({ withUser: 'super.admin' })
   
-  test('test automatic login', async ({ page, storageState }) => {
+  test('test automatic login', async ({ page }) => {
     page.goto('your-app-with-okta-auth-url')
 
     console.log('access token: ' + process.env.AUTH_TOKEN)
